@@ -13,7 +13,7 @@ function MealsOverviewScreen({route, navigation}) {
         return mealItem.categoryIds.indexOf(catId) >= 0 
     })
 
-    // useLayoutEffect instead of useEffect since we need it before the render painting
+    // useLayoutEffect instead of useEffect since we need it before the render painting, sets the page title
     useLayoutEffect(() => {
         const categoryTitle = CATEGORIES.find(category => category.id === catId).title
         navigation.setOptions({
@@ -26,6 +26,7 @@ function MealsOverviewScreen({route, navigation}) {
         const item = itemData.item
 
         const mealItemProps = {
+            id: item.id,
             title: item.title,
             imageUrl: item.imageUrl,
             affordability: item.affordability,
