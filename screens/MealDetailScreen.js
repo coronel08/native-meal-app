@@ -1,12 +1,18 @@
-import React from 'react'
-import { Image, Text, StyleSheet, View, ScrollView } from 'react-native'
+import React, { useLayoutEffect } from 'react'
+import { Image, Text, StyleSheet, View, ScrollView, Button } from 'react-native'
 import { MEALS } from '../data/fakeData'
 
-function MealDetailScreen({route}) {
+function MealDetailScreen({route, navigation}) {
   const mealId = route.params.mealId
   const selectedMeal = MEALS.find((meal) => meal.id === mealId)
 
   console.log(' meal id', selectedMeal)
+
+  // useLayoutEffect(() => {
+  //   navigation.setOptions({
+  //     headerRight: () => <Button title='Tap Me' onPress={() => console.log('pressed')}/>
+  //   })
+  // },[navigation])
 
   return (
     <ScrollView>
