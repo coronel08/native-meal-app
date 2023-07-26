@@ -13,4 +13,4 @@ Requirements
 Run App, to run the application run the command below and open the expo go app on your mobile device
 
 - Run the following command from the root of the project folder in your terminal `npm install` to install dependencies.
-- Run this command to start the server `npx expo start` and scan the qr code with the expo go app to view the site. 
+- Run this command to start the server `npm run start` and scan the qr code with the expo go app to view the site. 
